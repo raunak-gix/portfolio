@@ -189,28 +189,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Contact Form Submission Toast
+    // 5. Real Email Contact Form Submission (FormSubmit API + Mailto Fallback)
     const contactForm = document.getElementById('contact-form');
     const toast = document.getElementById('toast');
     const toastMessage = document.getElementById('toast-message');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const submitBtn = contactForm.querySelector('.form-submit-btn');
 
-            if (toast && toastMessage) {
-                toastMessage.textContent = `Thank you, ${nameInput.value || 'friend'}! Your message has been sent.`;
-                toast.classList.add('show');
+            const name = nameInput ? nameInput.value : '';
+            const email = emailInput ? emailInput.value : '';
+            const subject = subjectInput && subjectInput.value ? subjectInput.value : 'New Portfolio Contact Message';
+            const message = messageInput ? messageInput.value : '';
 
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 4000);
+            // Update button state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                const btnText = submitBtn.querySelector('span');
+                if (btnText) btnText.textContent = 'SENDING...';
             }
 
-            contactForm.reset();
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/dasraunak04@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        _subject: `[Portfolio Contact] ${subject}`,
+                        message: message
+                    })
+                });
+
+                if (response.ok) {
+                    if (toast && toastMessage) {
+                        toastMessage.textContent = `Thank you, ${name || 'friend'}! Your message has been sent directly to Raunak's email inbox.`;
+                        toast.classList.add('show');
+                        setTimeout(() => toast.classList.remove('show'), 5000);
+                    }
+                    contactForm.reset();
+                } else {
+                    // Fallback to mailto link
+                    window.location.href = `mailto:dasraunak04@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\nMessage:\n" + message)}`;
+                }
+            } catch (err) {
+                // Fallback to mailto link
+                window.location.href = `mailto:dasraunak04@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\nMessage:\n" + message)}`;
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    const btnText = submitBtn.querySelector('span');
+                    if (btnText) btnText.textContent = 'SEND MESSAGE';
+                }
+            }
         });
     }
 });
