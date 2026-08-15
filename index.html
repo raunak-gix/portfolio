@@ -44,6 +44,10 @@
                     <span class="status-text">RESUME</span>
                     <i data-lucide="file-text" style="width:14px; height:14px;"></i>
                 </button>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light or Dark Mode" title="Toggle Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
             </div>
 
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
@@ -65,6 +69,7 @@
             <li><a href="#projects" class="drawer-link">PROJECTS</a></li>
             <li><a href="#contact" class="drawer-link">CONTACT</a></li>
             <li><a href="javascript:void(0)" onclick="document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('resume-modal').classList.add('open');" class="drawer-link" style="color:var(--neon-green); font-weight:700;">RESUME CV</a></li>
+            <li><a href="javascript:void(0)" id="theme-toggle-mobile" class="drawer-link" style="color:var(--neon-blue); font-weight:700;">TOGGLE LIGHT/DARK THEME</a></li>
         </ul>
     </div>
 

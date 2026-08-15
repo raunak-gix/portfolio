@@ -3,6 +3,40 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Theme Toggle System (Dark / Light Mode)
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    const toggleTheme = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('portfolio-theme', newTheme);
+        
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    };
+
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', (e) => {
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            if (mobileDrawer) mobileDrawer.classList.remove('open');
+            toggleTheme(e);
+        });
+    }
+
     // 1. Mobile Menu Drawer Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobileDrawer = document.getElementById('mobile-drawer');

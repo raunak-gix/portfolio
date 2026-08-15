@@ -43,6 +43,63 @@
     --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Light Theme Overrides */
+[data-theme="light"] {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #e2e8f0;
+    --bg-card-accent: #e6fcf0;
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-dim: #64748b;
+    --text-dark: #f8fafc;
+
+    --border-color: rgba(15, 23, 42, 0.12);
+    --border-neon: rgba(0, 180, 75, 0.4);
+    --border-blue: rgba(0, 150, 220, 0.4);
+    --border-red: rgba(225, 29, 72, 0.4);
+
+    --neon-green: #008833;
+    --neon-blue: #0077cc;
+    --neon-red: #d91448;
+}
+
+[data-theme="light"] .cyber-grid-bg {
+    opacity: 0.22;
+    filter: invert(0.9);
+}
+
+[data-theme="light"] .scanlines {
+    opacity: 0.015;
+}
+
+[data-theme="light"] .navbar {
+    background-color: rgba(248, 250, 252, 0.88);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .mobile-drawer {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-textarea {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: rgba(15, 23, 42, 0.15);
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-textarea:focus {
+    background: #ffffff;
+}
+
+[data-theme="light"] .badge-item {
+    background: rgba(15, 23, 42, 0.04);
+}
+
 /* Reset & Base Styles */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -235,6 +292,51 @@ img {
 .nav-actions {
     display: flex;
     align-items: center;
+    gap: 12px;
+}
+
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    z-index: 110;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+    transform: scale(1.08);
+}
+
+.theme-toggle-btn .sun-icon {
+    display: none;
+    width: 18px;
+    height: 18px;
+}
+
+.theme-toggle-btn .moon-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+[data-theme="light"] .theme-toggle-btn .sun-icon {
+    display: block;
+    color: #f59e0b;
+}
+
+[data-theme="light"] .theme-toggle-btn .moon-icon {
+    display: none;
 }
 
 .status-pill {
