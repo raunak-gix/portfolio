@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAUNAK // Neo-Brutalist Portfolio & Visual Designer</title>
+    <meta name="description" content="Portfolio of Raunak - Visual & Graphic Designer specializing in Website Design, Video Editing, Poster Art & Merchandise Design.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+
+    <!-- Cyber Background Matrix Grid & Light Effects -->
+    <div class="cyber-grid-bg"></div>
+    <div class="scanlines"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-accent green">PORTFOLIO</span><span class="brand-accent blue">_</span><span class="brand-accent red">ME</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#tech" class="nav-link">STACK</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="status-pill resume-btn" id="resume-btn" onclick="document.getElementById('resume-modal').classList.add('open')" title="View Resume">
+                    <span class="status-dot"></span>
+                    <span class="status-text">RESUME</span>
+                    <i data-lucide="file-text" style="width:14px; height:14px;"></i>
+                </button>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <span class="brand-accent green">PORTFOLIO</span><span class="brand-accent blue">_</span><span class="brand-accent red">ME</span>
+            <button class="drawer-close" id="drawer-close"><i data-lucide="x"></i></button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#hero" class="drawer-link">HOME</a></li>
+            <li><a href="#about" class="drawer-link">ABOUT</a></li>
+            <li><a href="#tech" class="drawer-link">STACK</a></li>
+            <li><a href="#projects" class="drawer-link">PROJECTS</a></li>
+            <li><a href="#contact" class="drawer-link">CONTACT</a></li>
+            <li><a href="javascript:void(0)" onclick="document.getElementById('mobile-drawer').classList.remove('open'); document.getElementById('resume-modal').classList.add('open');" class="drawer-link" style="color:var(--neon-green); font-weight:700;">RESUME CV</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-bar"></span>
+                    <span class="tag-text">[ INITIALIZING INTERFACE ]</span>
+                </div>
+
+                <div class="title-wrapper">
+                    <h1 class="hero-title">RAUNAK <span class="accent-dot">.</span></h1>
+                    <div class="watermark-title">RAUNAK</div>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="badge-item green">
+                        <span class="square-icon green">■</span>
+                        <span>GRAPHIC & WEBSITE DESIGNER</span>
+                    </div>
+                    <div class="badge-item blue">
+                        <span class="square-icon blue">■</span>
+                        <span>VIDEO EDITOR & MOTION ARTIST</span>
+                    </div>
+                    <div class="badge-item red">
+                        <span class="square-icon red">■</span>
+                        <span>POSTER & MERCHANDISE CREATOR</span>
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Crafting high-impact visual artwork, custom website designs, video edits, posters, and merchandise apparel. Dedicated to turning creative concepts into pixel-perfect digital and print experiences.
+                </p>
+
+                <div class="hero-cta-group" style="display:flex; gap:16px; flex-wrap:wrap;">
+                    <a href="#projects" class="btn-primary">
+                        <span>EXPLORE_PROJECTS</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="assets/Raunak_Das_Resume.pdf" download="Raunak_Das_Resume.pdf" class="btn-outline">
+                        <span>DOWNLOAD CV</span>
+                        <i data-lucide="download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="portrait-card">
+                    <div class="corner-accents">
+                        <span class="corner top-left"></span>
+                        <span class="corner top-right"></span>
+                        <span class="corner bottom-left"></span>
+                        <span class="corner bottom-right"></span>
+                    </div>
+                    <div class="portrait-img-wrapper">
+                        <img src="assets/raunak_portrait.jpg" alt="Raunak - Fullstack Developer & Designer" class="portrait-img">
+                        <div class="img-overlay-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-meta-col">
+                    <h2 class="section-title">ABOUT_ME</h2>
+                    <div class="meta-divider"></div>
+                    
+                    <div class="meta-info-list">
+                        <div class="meta-info-item">
+                            <span class="meta-label">LOCATION</span>
+                            <span class="meta-value">KOLKATA, INDIA</span>
+                        </div>
+                        <div class="meta-info-item">
+                            <span class="meta-label">AVAILABILITY</span>
+                            <span class="meta-value highlight">AVAILABLE FOR WORK</span>
+                        </div>
+                        <div class="meta-info-item">
+                            <span class="meta-label">SPECIALIZATION</span>
+                            <span class="meta-value" style="color:var(--neon-blue);">GRAPHICS, WEB & VIDEO</span>
+                        </div>
+                        <div class="meta-info-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value" style="color:var(--neon-red);">FREELANCE / FULL-TIME</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content-col">
+                    <blockquote class="quote-box">
+                        "I craft bold visual artwork, sleek website interfaces, dynamic video edits, and custom merchandise. Every poster, frame, and pixel tells a distinct story."
+                    </blockquote>
+
+                    <p class="about-paragraph">
+                        I am a visual designer and digital artist based in Kolkata, India. My creative work spans graphics design, website & UI layout design, cinematic video editing, custom poster artwork, and merchandise apparel design. I collaborate with brands, creators, and businesses to build striking visual identities that leave a lasting impression across digital media and physical print.
+                    </p>
+
+                    <div class="stats-row" style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));">
+                        <div class="stat-card">
+                            <div class="stat-number">24<span class="stat-plus">+</span></div>
+                            <div class="stat-label">COMPLETED PROJECTS</div>
+                        </div>
+                        <div class="stat-card blue">
+                            <div class="stat-number">04<span class="stat-plus">+</span></div>
+                            <div class="stat-label">YEARS EXP.</div>
+                        </div>
+                        <div class="stat-card red">
+                            <div class="stat-number">10<span class="stat-plus">+</span></div>
+                            <div class="stat-label">DESIGN TOOLS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-section" id="tech">
+        <div class="section-container text-center">
+            <h2 class="section-title center">TECH_STACK</h2>
+            <p class="section-subtitle">TOOLS & TECHNOLOGIES</p>
+
+            <div class="tech-filters" id="tech-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="languages">LANGUAGES</button>
+                <button class="filter-btn" data-filter="frontend">FRONTEND</button>
+                <button class="filter-btn" data-filter="backend">BACKEND</button>
+                <button class="filter-btn" data-filter="digitalarts">DIGITAL ARTS & DESIGN</button>
+                <button class="filter-btn" data-filter="tools">TOOLS</button>
+            </div>
+
+            <div class="tech-grid" id="tech-grid">
+                <!-- Languages -->
+                <div class="tech-card green" data-category="languages">
+                    <div class="tech-icon"><i data-lucide="code-2"></i></div>
+                    <div class="tech-name">PYTHON</div>
+                </div>
+                <div class="tech-card blue" data-category="languages">
+                    <div class="tech-icon"><i data-lucide="braces"></i></div>
+                    <div class="tech-name">JAVASCRIPT</div>
+                </div>
+                <div class="tech-card red" data-category="languages">
+                    <div class="tech-icon"><i data-lucide="terminal"></i></div>
+                    <div class="tech-name">C / C++</div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="tech-card blue" data-category="frontend">
+                    <div class="tech-icon"><i data-lucide="component"></i></div>
+                    <div class="tech-name">REACT</div>
+                </div>
+                <div class="tech-card red" data-category="frontend">
+                    <div class="tech-icon"><i data-lucide="layout"></i></div>
+                    <div class="tech-name">HTML5 / CSS3</div>
+                </div>
+
+                <!-- Backend -->
+                <div class="tech-card green" data-category="backend">
+                    <div class="tech-icon"><i data-lucide="cpu"></i></div>
+                    <div class="tech-name">FASTAPI</div>
+                </div>
+
+                <!-- Digital Arts & Design -->
+                <div class="tech-card blue" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+                            <path d="M7 16V8h3a2.5 2.5 0 0 1 0 5H7"></path>
+                            <path d="M14 16c1-1 3-1.5 3-3s-2-2-3-2-3-.5-3-2 2-2 3-2"></path>
+                        </svg>
+                    </div>
+                    <div class="tech-name">ADOBE PHOTOSHOP</div>
+                </div>
+                <div class="tech-card red" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+                            <path d="M7 16l3-8 3 8"></path>
+                            <path d="M8 13.5h4"></path>
+                            <line x1="16" y1="10" x2="16" y2="16"></line>
+                            <circle cx="16" cy="8" r="0.5" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <div class="tech-name">ADOBE ILLUSTRATOR</div>
+                </div>
+                <div class="tech-card red" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+                            <path d="M7 16V8h3a2.5 2.5 0 0 1 0 5H7"></path>
+                            <path d="M14 16v-5c0-1 1-1.5 2.5-1.5"></path>
+                        </svg>
+                    </div>
+                    <div class="tech-name">PREMIERE PRO</div>
+                </div>
+                <div class="tech-card blue" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+                            <path d="M7 16l2.5-8 2.5 8"></path>
+                            <path d="M8 13.5h3"></path>
+                            <path d="M17 12c-2.5 0-3 1.5-3 2.5s1 2 3 2 2.5-1 2.5-2"></path>
+                            <path d="M14 14h3"></path>
+                        </svg>
+                    </div>
+                    <div class="tech-name">AFTER EFFECTS</div>
+                </div>
+                <div class="tech-card green" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
+                            <path d="M7 9l4 7"></path>
+                            <path d="M11 9l-4 7"></path>
+                            <path d="M15 16v-8h1.5a3 3 0 0 1 0 8H15z"></path>
+                        </svg>
+                    </div>
+                    <div class="tech-name">ADOBE XD</div>
+                </div>
+                <div class="tech-card red" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.47 2 2 6.47 2 12c0 5.53 4.47 10 10 10 1.18 0 2.29-.21 3.32-.59.71-.26 1.18-.94 1.18-1.7 0-1.52 1.23-2.75 2.75-2.75H20c1.1 0 2-.9 2-2 0-7.18-4.47-13-10-13z"></path>
+                            <circle cx="7.5" cy="11.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="10.5" cy="7.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="15.5" cy="7.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="18.5" cy="11.5" r="1.5" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <div class="tech-name">KRITA</div>
+                </div>
+                <div class="tech-card green" data-category="digitalarts">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                            <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                            <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                            <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                            <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                        </svg>
+                    </div>
+                    <div class="tech-name">FIGMA</div>
+                </div>
+
+                <!-- Tools -->
+                <div class="tech-card blue" data-category="tools">
+                    <div class="tech-icon"><i data-lucide="git-branch"></i></div>
+                    <div class="tech-name">GIT / GITHUB</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Log Section -->
+    <section class="projects-section" id="projects">
+        <div class="section-container">
+            <div class="projects-header">
+                <h2 class="section-title">PROJECT_LOG</h2>
+                <div class="projects-indicator">
+                    <span class="indicator-bar"></span>
+                    <span class="indicator-text">ALL MY PROJECTS 2022-2024</span>
+                </div>
+            </div>
+
+            <div class="projects-stack">
+
+                <!-- Project 1: Cyberpunk Merch & Poster Suite -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <div class="media-frame">
+                            <img src="assets/sign_language_translator.jpg" alt="Cyberpunk Merch & Poster Suite Graphic Design" class="project-img">
+                            <div class="media-badge red">GRAPHIC & MERCH BRANDING</div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag-pill red">PHOTOSHOP</span>
+                            <span class="tag-pill blue">ILLUSTRATOR</span>
+                            <span class="tag-pill green">MERCHANDISE</span>
+                        </div>
+
+                        <h3 class="project-title">CYBERPUNK MERCH & POSTER SUITE</h3>
+
+                        <p class="project-description">
+                            A complete graphic design and apparel branding suite featuring custom vector artwork, high-resolution poster prints, streetwear merchandise apparel designs, and visual branding assets.
+                        </p>
+
+                        <div class="project-actions">
+                            <button class="btn-primary modal-trigger" data-project="sign-language">
+                                <span>EXPLORE_PROJECT</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="btn-outline">
+                                <span>PORTFOLIO</span>
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Neo-Brutalist Web & Motion UI -->
+                <div class="project-card reversed">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag-pill green">FIGMA</span>
+                            <span class="tag-pill blue">ADOBE XD</span>
+                            <span class="tag-pill red">AFTER EFFECTS</span>
+                        </div>
+
+                        <h3 class="project-title">NEO-BRUTALIST WEB & MOTION UI</h3>
+
+                        <p class="project-description">
+                            End-to-end website design and video promo edit for a modern tech brand. Includes interactive Figma UI components, responsive layout design, and motion graphics video edits.
+                        </p>
+
+                        <div class="project-actions">
+                            <button class="btn-primary modal-trigger" data-project="resume-checker">
+                                <span>EXPLORE_PROJECT</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="btn-outline">
+                                <span>PORTFOLIO</span>
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-media">
+                        <div class="media-frame">
+                            <img src="assets/resume_checker_dashboard.jpg" alt="Neo-Brutalist Web & Motion UI Layout" class="project-img">
+                            <div class="media-badge blue">WEB & VIDEO SHOWCASE</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info-col">
+                    <div class="contact-subhead">// READY TO START?</div>
+                    <h2 class="contact-title">
+                        GET_IN <br>
+                        <span class="gradient-text">TOUCH</span>
+                    </h2>
+
+                    <p class="contact-lead">
+                        If you have a project in mind, want to discuss a potential role, or just want to talk about tech and design systems—drop me a line and let's create something.
+                    </p>
+
+                    <div class="direct-contacts">
+                        <div class="contact-link-item">
+                            <i data-lucide="mail" style="color:var(--neon-green)"></i>
+                            <a href="mailto:dasraunak04@gmail.com" style="color:var(--text-primary); text-decoration:none;">dasraunak04@gmail.com</a>
+                        </div>
+                        <div class="contact-link-item">
+                            <i data-lucide="phone" style="color:var(--neon-blue)"></i>
+                            <span>+91 8584878518</span>
+                        </div>
+                        <div class="contact-link-item">
+                            <i data-lucide="map-pin" style="color:var(--neon-red)"></i>
+                            <span>Kolkata, West Bengal (GMT+5:30)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-col">
+                    <form class="cyber-form" id="contact-form">
+                        <div class="form-group full-width">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry">
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell me about your project or idea..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">
+                            <span>SEND MESSAGE</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="watermark-footer">COMMUNICATION</div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-brand"><span class="brand-accent green">RAUNAK</span><span class="brand-accent blue">_</span><span class="brand-accent red">DAS</span></span>
+                <span class="footer-copy">Graphic Designer & Design Instructor</span>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/raunak-gix" target="_blank" rel="noopener" class="social-link" style="color:var(--neon-green)"><i data-lucide="github"></i> Github</a>
+                <a href="https://linkedin.com/in/raunakdas04" target="_blank" rel="noopener" class="social-link" style="color:var(--neon-blue)"><i data-lucide="linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal Popup -->
+    <div class="modal-overlay" id="project-modal" onclick="if(event.target === this) this.classList.remove('open')">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close" onclick="document.getElementById('project-modal').classList.remove('open')"><i data-lucide="x"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume / CV Modal Popup -->
+    <div class="modal-overlay" id="resume-modal" onclick="if(event.target === this) this.classList.remove('open')">
+        <div class="modal-card" style="max-width: 820px; max-height: 90vh; overflow-y: auto;">
+            <button class="modal-close" id="resume-modal-close" onclick="document.getElementById('resume-modal').classList.remove('open')"><i data-lucide="x"></i></button>
+            <div class="modal-body" id="resume-modal-body">
+                <div style="font-family: var(--font-mono); color: var(--neon-green); font-size: 0.85rem; margin-bottom: 8px; letter-spacing: 0.1em;">CURRICULUM VITAE // OFFICIAL RESUME</div>
+                <h2 style="font-family: var(--font-heading); font-size: 2.4rem; font-weight:700; margin-bottom: 4px; color: var(--text-primary);">RAUNAK DAS</h2>
+                <div style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--neon-green); margin-bottom: 20px; font-weight:600;">GRAPHIC DESIGNER | DESIGN INSTRUCTOR</div>
+                
+                <div style="display:flex; flex-wrap:wrap; gap:16px; font-family: var(--font-mono); font-size:0.85rem; color: var(--text-secondary); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color);">
+                    <span>📍 Kolkata, West Bengal</span>
+                    <span>📞 +91 8584878518</span>
+                    <span>✉️ dasraunak04@gmail.com</span>
+                    <span>🔗 <a href="https://linkedin.com/in/raunakdas04" target="_blank" rel="noopener" style="color:var(--neon-green)">LinkedIn</a></span>
+                    <span>🐙 <a href="https://github.com/raunak-gix" target="_blank" rel="noopener" style="color:var(--neon-green)">GitHub</a></span>
+                </div>
+
+                <h4 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--neon-green); margin-bottom: 10px;">PROFESSIONAL SUMMARY</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; font-size:0.95rem;">
+                    Creative and experienced Graphic Designer with hands-on expertise in Adobe Photoshop, Adobe Illustrator, digital design, branding, and visual communication. Experienced in creating posters, promotional materials, merchandise, apparel designs, and digital artwork through freelance and organizational projects. Passionate about teaching and sharing practical design skills, with strong communication, patience, and ability to guide students through creative software and design workflows. Seeking a Faculty/Graphic Design Instructor role in Fashion and Interior Design education.
+                </p>
+
+                <h4 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--neon-blue); margin-bottom: 12px;">DESIGN & SOFTWARE SKILLS</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 24px;">
+                    <span class="tag-pill red">Adobe Photoshop</span>
+                    <span class="tag-pill blue">Adobe Illustrator</span>
+                    <span class="tag-pill green">CorelDRAW</span>
+                    <span class="tag-pill green">Figma</span>
+                    <span class="tag-pill blue">Krita</span>
+                    <span class="tag-pill red">Adobe Premiere Pro</span>
+                    <span class="tag-pill red">Adobe After Effects</span>
+                    <span class="tag-pill blue">DaVinci Resolve</span>
+                    <span class="tag-pill green">CapCut</span>
+                    <span class="tag-pill red">Apparel/Jersey Design</span>
+                    <span class="tag-pill blue">Merchandise Design</span>
+                    <span class="tag-pill green">Typography & Composition</span>
+                </div>
+
+                <h4 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--neon-red); margin-bottom: 12px;">PROFESSIONAL EXPERIENCE</h4>
+                <div style="margin-bottom: 20px; background: var(--bg-card); padding: 16px; border-left: 3px solid var(--neon-blue); border-radius: 4px;">
+                    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; font-weight:600; color:var(--text-primary); margin-bottom: 6px;">
+                        <span>Freelance Graphic Designer</span>
+                        <span style="color:var(--neon-blue); font-family:var(--font-mono); font-size:0.85rem;">2020 – Present</span>
+                    </div>
+                    <ul style="color:var(--text-secondary); font-size:0.9rem; padding-left:18px; line-height:1.6;">
+                        <li>Created posters, promotional creatives, social media graphics, branding materials, merchandise designs, and digital artwork for clients.</li>
+                        <li>Worked extensively with Adobe Photoshop and Illustrator for photo editing, composition, typography, and visual design.</li>
+                        <li>Developed creative concepts according to client requirements and refined designs based on feedback.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 24px; background: var(--bg-card); padding: 16px; border-left: 3px solid var(--neon-red); border-radius: 4px;">
+                    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; font-weight:600; color:var(--text-primary); margin-bottom: 6px;">
+                        <span>PR Lead – Technical Club, Meghnad Saha Institute of Technology</span>
+                        <span style="color:var(--neon-red); font-family:var(--font-mono); font-size:0.85rem;">June 2025 – Aug 2026</span>
+                    </div>
+                    <ul style="color:var(--text-secondary); font-size:0.9rem; padding-left:18px; line-height:1.6;">
+                        <li>Led a creative team handling graphic design, branding, event promotion, photography, and visual communication.</li>
+                        <li>Guided team members in creating posters, social media creatives, promotional materials, and event branding.</li>
+                    </ul>
+                </div>
+
+                <h4 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--neon-green); margin-bottom: 12px;">RELEVANT PROJECTS</h4>
+                <div style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px; line-height:1.6;">
+                    <p style="margin-bottom:8px;"><strong style="color:var(--text-primary);">• Apparel & Jersey Design – Paridhi 2026:</strong> Designed official event jersey incorporating branding, typography, graphics, and apparel production assets.</p>
+                    <p style="margin-bottom:8px;"><strong style="color:var(--text-primary);">• Annual Techfest Paridhi 2026 Website & UI:</strong> Designed visual identity and complete UI/UX for Paridhi 2026 Techfest website using Figma, Illustrator & Photoshop.</p>
+                    <p><strong style="color:var(--text-primary);">• Digital Painting & Concept Art:</strong> Created original digital paintings, character design, and environment artwork using Krita and Photoshop.</p>
+                </div>
+
+                <h4 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--neon-green); margin-bottom: 10px;">EDUCATION</h4>
+                <p style="color: var(--text-secondary); font-size:0.95rem; margin-bottom: 30px;">
+                    <strong style="color:var(--text-primary);">B.Tech in Computer Science and Engineering (7.34 GPA)</strong> — Meghnad Saha Institute of Technology, Kolkata (2022 – 2026)
+                </p>
+
+                <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                    <a href="assets/Raunak_Das_Resume.pdf" download="Raunak_Das_Resume.pdf" class="btn-primary" style="text-decoration:none;">
+                        <span>DOWNLOAD RESUME PDF</span>
+                        <i data-lucide="download"></i>
+                    </a>
+                    <a href="mailto:dasraunak04@gmail.com" class="btn-outline" style="text-decoration:none;">
+                        <span>GET IN TOUCH</span>
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast">
+        <i data-lucide="check-circle-2"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
