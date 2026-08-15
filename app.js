@@ -106,6 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             github: 'https://github.com',
             demo: 'https://github.com'
+        },
+        'paridhi-2026': {
+            title: 'PARIDHI 2026 TECHFEST WEBSITE & UI',
+            badge: 'WEBSITE DESIGN // TECHFEST UI/UX BRANDING',
+            tags: ['Figma', 'Photoshop', 'Illustrator', 'HTML5/CSS3', 'JavaScript'],
+            img: 'assets/paridhi_2026_website.jpg',
+            description: `Complete visual identity and website design for Paridhi 2026 — the annual technical festival of Meghnad Saha Institute of Technology. Features an energetic retro pop/cartoon aesthetic, event domain selectors, live countdown timer, and interactive registration workflows.`,
+            features: [
+                'Vibrant cartoon retro pop art direction & customized domain cards (Coding, Robotics, Gaming, Civil, Electrical).',
+                'Interactive live event countdown timer interface and domain selector drawers.',
+                'Designed complete UI layout systems in Figma, Photoshop & Illustrator.',
+                'Full responsive web user interface crafted for desktop and mobile techfest attendees.'
+            ],
+            github: 'https://github.com/raunak-gix',
+            demo: 'https://github.com/raunak-gix'
         }
     };
 
