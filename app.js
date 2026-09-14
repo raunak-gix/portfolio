@@ -164,25 +164,43 @@ document.addEventListener('DOMContentLoaded', () => {
         'photography-card': {
             title: 'PHOTOGRAPHY & CONCEPTUAL ART',
             badge: 'VISUAL ARTS // EVENT & ATMOSPHERIC PHOTOGRAPHY',
-            description: `High-contrast visual photography, atmospheric lighting shots, college festival event coverage, and digital painting concept art created with Photoshop & Krita.`,
+            description: `Official photography gallery sourced directly from Raunak's Google Drive collection — featuring event coverage, portraiture, street shots, and post-processed visual art.`,
             items: [
                 {
-                    name: 'CYBERPUNK STREET & ATMOSPHERIC PHOTOGRAPHY',
-                    img: 'assets/photography_showcase.jpg',
-                    tags: ['Night Shots', 'Lightroom', 'Atmospheric'],
-                    desc: 'Dramatic night street photography featuring neon reflections, high-contrast shadows, and cinematic color grading.'
+                    name: 'ATMOSPHERIC STREET & LIGHTING SHOT 01',
+                    img: 'assets/photos/IMG_20240808_170845.jpg',
+                    tags: ['Night Shots', 'Lightroom', 'Composition'],
+                    desc: 'Atmospheric photography highlighting natural lighting, high-contrast mood, and post-processed color grading.'
                 },
                 {
-                    name: 'FESTIVAL & STAGE EVENT PHOTOGRAPHY',
-                    img: 'assets/raunak_portrait.jpg',
+                    name: 'CULTURAL FESTIVAL & STAGE PORTRAIT 02',
+                    img: 'assets/photos/IMG_20241007_142805.jpg',
                     tags: ['Event Coverage', 'Portraits', 'Photoshop'],
-                    desc: 'Live event coverage capturing stage performances, candid moments, and official promotional portraits.'
+                    desc: 'Live event stage photography capturing expressive candid moments during technical and cultural festivals.'
                 },
                 {
-                    name: 'DIGITAL PAINTING & CONCEPT ART COLLECTION',
-                    img: 'assets/sign_language_translator.jpg',
-                    tags: ['Krita', 'Photoshop', 'Digital Art'],
-                    desc: 'Original digital paintings, character design concepts, and atmospheric environment artwork rendered in Krita & Photoshop.'
+                    name: 'CONCEPT ART & ATMOSPHERIC SHOT 03',
+                    img: 'assets/photos/IMG_20241008_202736.jpg',
+                    tags: ['Camera Shots', 'Lightroom', 'Visual Art'],
+                    desc: 'High-resolution photo shot featuring detailed perspective, contrast shadow play, and refined visual composition.'
+                },
+                {
+                    name: 'EVENT & PROMOTIONAL SHOT 04',
+                    img: 'assets/photos/IMG_20241011_151030.jpg',
+                    tags: ['Event Photography', 'Shots', 'Branding'],
+                    desc: 'Promotional event snapshot featuring active scene framing and digital retouches.'
+                },
+                {
+                    name: 'OUTDOOR LIGHTING & COMPOSITION 05',
+                    img: 'assets/photos/IMG_20241011_173840.jpg',
+                    tags: ['Outdoor', 'Natural Light', 'Camera'],
+                    desc: 'Outdoor framing capturing golden hour shadows and vivid color dynamics.'
+                },
+                {
+                    name: 'VISUAL DOCUMENTATION SHOT 06',
+                    img: 'assets/photos/DOC-20241013-WA0067.jpg',
+                    tags: ['Documentation', 'Visuals', 'Posters'],
+                    desc: 'Documented visual creative composition created for organizational events.'
                 }
             ]
         }
