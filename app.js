@@ -111,47 +111,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Project Modal Details Data
     const projectDetails = {
-        'sign-language': {
-            title: 'CYBERPUNK MERCH & POSTER SUITE',
-            badge: 'GRAPHIC DESIGN // MERCHANDISE BRANDING',
-            tags: ['Photoshop', 'Illustrator', 'Merchandise', 'Krita', 'Figma'],
-            img: 'assets/sign_language_translator.jpg',
-            description: `A complete graphic design and apparel branding project featuring custom vector artwork, high-resolution poster prints, streetwear merchandise apparel designs, and visual branding assets.`,
-            features: [
-                'Custom vector illustrations crafted in Illustrator & Krita.',
-                'High-resolution print-ready poster compositions in Photoshop.',
-                'Streetwear merchandise apparel mockups & tech packs for production.',
-                'Complete brand color systems and graphic design style guides.'
-            ],
-            github: 'https://github.com',
-            demo: 'https://github.com'
-        },
-        'resume-checker': {
-            title: 'NEO-BRUTALIST WEB & MOTION UI',
-            badge: 'UI/UX DESIGN // VIDEO EDITING & MOTION',
-            tags: ['Figma', 'Adobe XD', 'After Effects', 'Premiere Pro', 'HTML5/CSS3'],
+        'portfolios-card': {
+            title: 'PORTFOLIOS & DESIGN SHOWCASE',
+            badge: 'GRAPHIC DESIGN // BRAND IDENTITY & UI/UX',
+            tags: ['Figma UI/UX', 'Photoshop', 'Illustrator', 'Merchandise', 'Branding'],
             img: 'assets/resume_checker_dashboard.jpg',
-            description: `End-to-end website design and video promo edit for a modern tech brand. Includes interactive Figma UI components, responsive website layout design, and motion graphics video edits.`,
+            description: `Comprehensive portfolio collection of visual design systems, merchandise apparel graphics, neo-brutalist web UI concepts, and brand identity projects.`,
             features: [
-                'Responsive neo-brutalist website UI prototype created in Figma & Adobe XD.',
-                'Cinematic trailer and promo video edit cut in Premiere Pro.',
-                'Dynamic motion graphics and typography animations created in After Effects.',
-                'Interactive design tokens, layout grids, and reusable UI library.'
+                'Complete brand identity design kits including typography, color palettes, and logo usage guidelines.',
+                'Streetwear merchandise & event jersey designs engineered for physical production.',
+                'High-contrast neo-brutalist website prototypes designed in Figma and Adobe XD.',
+                'Vector logo systems, poster graphics, and promotional social media assets.'
             ],
-            github: 'https://github.com',
-            demo: 'https://github.com'
+            github: 'https://github.com/raunak-gix',
+            demo: 'https://github.com/raunak-gix'
         },
-        'paridhi-2026': {
-            title: 'PARIDHI 2026 TECHFEST WEBSITE & UI',
-            badge: 'WEBSITE DESIGN // TECHFEST UI/UX BRANDING',
-            tags: ['Figma', 'Photoshop', 'Illustrator', 'HTML5/CSS3', 'JavaScript'],
+        'projects-card': {
+            title: 'FEATURED WEB & TECH PROJECTS',
+            badge: 'FRONTEND DEVELOPMENT // INTERACTIVE WEB APPS',
+            tags: ['Techfest UI', 'JavaScript', 'HTML5/CSS3', 'React', 'Figma'],
             img: 'assets/paridhi_2026_website.jpg',
-            description: `Complete visual identity and website design for Paridhi 2026 — the annual technical festival of Meghnad Saha Institute of Technology. Features an energetic retro pop/cartoon aesthetic, event domain selectors, live countdown timer, and interactive registration workflows.`,
+            description: `Full-stack frontend web applications and event portals built with modern responsive layouts, interactive domain drawers, dynamic countdown timers, and web design systems.`,
             features: [
-                'Vibrant cartoon retro pop art direction & customized domain cards (Coding, Robotics, Gaming, Civil, Electrical).',
-                'Interactive live event countdown timer interface and domain selector drawers.',
-                'Designed complete UI layout systems in Figma, Photoshop & Illustrator.',
-                'Full responsive web user interface crafted for desktop and mobile techfest attendees.'
+                'Paridhi 2026 Annual Techfest Website & Interactive UI/UX registration platform.',
+                'Interactive domain selector tabs, live event countdown, and pop art cartoon aesthetics.',
+                'Responsive cross-device UI optimization for mobile, tablet, and desktop viewports.',
+                'Clean component-driven web codebases integrating modern CSS design systems.'
+            ],
+            github: 'https://github.com/raunak-gix',
+            demo: 'https://github.com/raunak-gix'
+        },
+        'photography-card': {
+            title: 'PHOTOGRAPHY & CONCEPTUAL ART',
+            badge: 'VISUAL ARTS // EVENT & ATMOSPHERIC PHOTOGRAPHY',
+            tags: ['Camera Shots', 'Lightroom', 'Photoshop', 'Concept Art', 'Krita'],
+            img: 'assets/photography_showcase.jpg',
+            description: `Visual photography collection highlighting atmospheric mood shots, event coverage, street photography, and original digital artwork created with Krita and Photoshop.`,
+            features: [
+                'High-contrast night & street photography with dramatic lighting and color grading.',
+                'Event photography coverage for college technical & cultural festivals.',
+                'Digital painting and concept artwork emphasizing character design and environmental depth.',
+                'Advanced photo post-processing, color correction, and visual retouching in Photoshop & Lightroom.'
             ],
             github: 'https://github.com/raunak-gix',
             demo: 'https://github.com/raunak-gix'
