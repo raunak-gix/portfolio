@@ -113,26 +113,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectDetails = {
         'portfolios-card': {
             title: 'PORTFOLIOS & DESIGN SHOWCASE',
-            badge: 'GRAPHIC DESIGN // BRAND IDENTITY & UI/UX',
-            description: `Curated collection of brand identity projects, streetwear merchandise apparel, vector artwork suites, and neo-brutalist web UI design portfolios created by Raunak.`,
+            badge: 'GRAPHIC DESIGN // BRAND IDENTITY & WEBSITES',
+            description: `Official collection of custom portfolio websites designed and developed by Raunak — spanning weather workstations, data analyst showcases, photography archives, and creative media portfolios.`,
             items: [
                 {
-                    name: 'NEO-BRUTALIST WEB & MOTION UI PORTFOLIO',
+                    name: 'STRATUS // ATMOSPHERIC INTELLIGENCE WORKSTATION',
                     img: 'assets/resume_checker_dashboard.jpg',
-                    tags: ['Figma', 'After Effects', 'Web UI'],
-                    desc: 'Interactive website design system with dark mode design tokens, motion graphics video edits, and responsive UI components.'
+                    tags: ['Vercel', 'Weather Web App', 'Interactive UI'],
+                    desc: 'Real-time weather intelligence workstation featuring dynamic atmospheric data visualization, search interfaces, and sleek cyber styling.',
+                    url: 'https://weather-rho-two-69.vercel.app/'
                 },
                 {
-                    name: 'CYBERPUNK APPAREL & MERCH SUITE',
-                    img: 'assets/sign_language_translator.jpg',
-                    tags: ['Photoshop', 'Illustrator', 'Merchandise'],
-                    desc: 'Custom vector artwork, streetwear merchandise apparel mockups, high-res poster prints, and factory production tech packs.'
-                },
-                {
-                    name: 'PARIDHI 2026 TECHFEST BRAND IDENTITY',
+                    name: 'DEBANGSHI | CS GRADUATE & DATA ANALYST PORTFOLIO',
                     img: 'assets/paridhi_2026_website.jpg',
-                    tags: ['Branding', 'Typography', 'Photoshop'],
-                    desc: 'Complete visual identity, official event jersey design, promotional posters, and social media creative suites for annual techfest.'
+                    tags: ['Vercel', 'Data Analyst', 'Frontend Portfolio'],
+                    desc: 'Personal portfolio website designed for Debangshi featuring data analytics project showcases, technical skills, and responsive web design.',
+                    url: 'https://debangshi-portfolio-cyan.vercel.app/'
+                },
+                {
+                    name: 'SHUVOJIT PHOTOGRAPHY | FINE ART & EDITORIAL ARCHIVES',
+                    img: 'assets/photography_showcase.jpg',
+                    tags: ['GitHub Pages', 'Fine Art', 'Photography Gallery'],
+                    desc: 'Editorial photography archive website showcasing portraiture, fine art galleries, photo series, and minimalist grid layouts.',
+                    url: 'https://raunak-gix.github.io/shuvojit-photography/'
+                },
+                {
+                    name: 'TAPOBRATA | VIDEO EDITOR & MOTION GRAPHICS PORTFOLIO',
+                    img: 'assets/sign_language_translator.jpg',
+                    tags: ['GitHub Pages', 'Video Editing', 'Motion Graphics'],
+                    desc: 'Portfolio site for Tapobrata highlighting video editing showreels, motion graphics projects, and frontend developer experience.',
+                    url: 'https://raunak-gix.github.io/tapobrata_portfolio/'
+                },
+                {
+                    name: 'SINJINI | SENIOR DATA ARCHITECT & BI ANALYST PORTFOLIO',
+                    img: 'assets/raunak_portrait.jpg',
+                    tags: ['GitHub Pages', 'Data Architect', 'BI Analytics'],
+                    desc: 'Professional portfolio designed for Sinjini highlighting Business Intelligence metrics, data architecture blueprints, and analytical skills.',
+                    url: 'https://raunak-gix.github.io/sinjini_portfolio/'
                 }
             ]
         },
@@ -232,6 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <div class="modal-domain-item-tags">
                                         ${item.tags.map(t => `<span class="tag-pill accent">${t}</span>`).join('')}
                                     </div>
+                                    ${item.url ? `
+                                        <a href="${item.url}" target="_blank" rel="noopener" class="btn-primary" style="padding: 8px 14px; font-size: 0.8rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; width: fit-content;">
+                                            <span>VISIT LIVE WEBSITE</span>
+                                            <i data-lucide="external-link" style="width:14px; height:14px;"></i>
+                                        </a>
+                                    ` : ''}
                                 </div>
                             </div>
                         `).join('')}
