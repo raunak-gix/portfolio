@@ -117,36 +117,36 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `Official collection of custom portfolio websites designed and developed by Raunak — spanning weather workstations, data analyst showcases, photography archives, and creative media portfolios.`,
             items: [
                 {
+                    name: 'SHUVOJIT PHOTOGRAPHY | FINE ART & EDITORIAL ARCHIVES',
+                    img: 'assets/portfolios/shuvojit_preview.jpg',
+                    tags: ['GitHub Pages', 'Fine Art', 'Photography Gallery'],
+                    desc: 'Editorial photography archive website showcasing portraiture, fine art galleries, photo series, and minimalist grid layouts.',
+                    url: 'https://raunak-gix.github.io/shuvojit-photography/'
+                },
+                {
                     name: 'STRATUS // ATMOSPHERIC INTELLIGENCE WORKSTATION',
-                    img: 'assets/resume_checker_dashboard.jpg',
+                    img: 'assets/portfolios/stratus_preview.jpg',
                     tags: ['Vercel', 'Weather Web App', 'Interactive UI'],
                     desc: 'Real-time weather intelligence workstation featuring dynamic atmospheric data visualization, search interfaces, and sleek cyber styling.',
                     url: 'https://weather-rho-two-69.vercel.app/'
                 },
                 {
                     name: 'DEBANGSHI | CS GRADUATE & DATA ANALYST PORTFOLIO',
-                    img: 'assets/paridhi_2026_website.jpg',
+                    img: 'assets/portfolios/debangshi_preview.jpg',
                     tags: ['Vercel', 'Data Analyst', 'Frontend Portfolio'],
                     desc: 'Personal portfolio website designed for Debangshi featuring data analytics project showcases, technical skills, and responsive web design.',
                     url: 'https://debangshi-portfolio-cyan.vercel.app/'
                 },
                 {
-                    name: 'SHUVOJIT PHOTOGRAPHY | FINE ART & EDITORIAL ARCHIVES',
-                    img: 'assets/photography_showcase.jpg',
-                    tags: ['GitHub Pages', 'Fine Art', 'Photography Gallery'],
-                    desc: 'Editorial photography archive website showcasing portraiture, fine art galleries, photo series, and minimalist grid layouts.',
-                    url: 'https://raunak-gix.github.io/shuvojit-photography/'
-                },
-                {
                     name: 'TAPOBRATA | VIDEO EDITOR & MOTION GRAPHICS PORTFOLIO',
-                    img: 'assets/sign_language_translator.jpg',
+                    img: 'assets/portfolios/tapobrata_preview.jpg',
                     tags: ['GitHub Pages', 'Video Editing', 'Motion Graphics'],
                     desc: 'Portfolio site for Tapobrata highlighting video editing showreels, motion graphics projects, and frontend developer experience.',
                     url: 'https://raunak-gix.github.io/tapobrata_portfolio/'
                 },
                 {
                     name: 'SINJINI | SENIOR DATA ARCHITECT & BI ANALYST PORTFOLIO',
-                    img: 'assets/raunak_portrait.jpg',
+                    img: 'assets/portfolios/sinjini_preview.jpg',
                     tags: ['GitHub Pages', 'Data Architect', 'BI Analytics'],
                     desc: 'Professional portfolio designed for Sinjini highlighting Business Intelligence metrics, data architecture blueprints, and analytical skills.',
                     url: 'https://raunak-gix.github.io/sinjini_portfolio/'
