@@ -679,7 +679,7 @@ img {
 .watermark-title {
     position: absolute;
     top: -20px;
-    left: -10px;
+    left: -20px;
     font-family: var(--font-heading);
     font-size: 8rem;
     font-weight: 900;
