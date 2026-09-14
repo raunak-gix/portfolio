@@ -109,52 +109,82 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Project Modal Details Data
+    // 4. Project Modal Details Data (Domain Pop-up Galleries)
     const projectDetails = {
         'portfolios-card': {
             title: 'PORTFOLIOS & DESIGN SHOWCASE',
             badge: 'GRAPHIC DESIGN // BRAND IDENTITY & UI/UX',
-            tags: ['Figma UI/UX', 'Photoshop', 'Illustrator', 'Merchandise', 'Branding'],
-            img: 'assets/resume_checker_dashboard.jpg',
-            description: `Comprehensive portfolio collection of visual design systems, merchandise apparel graphics, neo-brutalist web UI concepts, and brand identity projects.`,
-            features: [
-                'Complete brand identity design kits including typography, color palettes, and logo usage guidelines.',
-                'Streetwear merchandise & event jersey designs engineered for physical production.',
-                'High-contrast neo-brutalist website prototypes designed in Figma and Adobe XD.',
-                'Vector logo systems, poster graphics, and promotional social media assets.'
-            ],
-            github: 'https://github.com/raunak-gix',
-            demo: 'https://github.com/raunak-gix'
+            description: `Curated collection of brand identity projects, streetwear merchandise apparel, vector artwork suites, and neo-brutalist web UI design portfolios created by Raunak.`,
+            items: [
+                {
+                    name: 'NEO-BRUTALIST WEB & MOTION UI PORTFOLIO',
+                    img: 'assets/resume_checker_dashboard.jpg',
+                    tags: ['Figma', 'After Effects', 'Web UI'],
+                    desc: 'Interactive website design system with dark mode design tokens, motion graphics video edits, and responsive UI components.'
+                },
+                {
+                    name: 'CYBERPUNK APPAREL & MERCH SUITE',
+                    img: 'assets/sign_language_translator.jpg',
+                    tags: ['Photoshop', 'Illustrator', 'Merchandise'],
+                    desc: 'Custom vector artwork, streetwear merchandise apparel mockups, high-res poster prints, and factory production tech packs.'
+                },
+                {
+                    name: 'PARIDHI 2026 TECHFEST BRAND IDENTITY',
+                    img: 'assets/paridhi_2026_website.jpg',
+                    tags: ['Branding', 'Typography', 'Photoshop'],
+                    desc: 'Complete visual identity, official event jersey design, promotional posters, and social media creative suites for annual techfest.'
+                }
+            ]
         },
         'projects-card': {
             title: 'FEATURED WEB & TECH PROJECTS',
             badge: 'FRONTEND DEVELOPMENT // INTERACTIVE WEB APPS',
-            tags: ['Techfest UI', 'JavaScript', 'HTML5/CSS3', 'React', 'Figma'],
-            img: 'assets/paridhi_2026_website.jpg',
-            description: `Full-stack frontend web applications and event portals built with modern responsive layouts, interactive domain drawers, dynamic countdown timers, and web design systems.`,
-            features: [
-                'Paridhi 2026 Annual Techfest Website & Interactive UI/UX registration platform.',
-                'Interactive domain selector tabs, live event countdown, and pop art cartoon aesthetics.',
-                'Responsive cross-device UI optimization for mobile, tablet, and desktop viewports.',
-                'Clean component-driven web codebases integrating modern CSS design systems.'
-            ],
-            github: 'https://github.com/raunak-gix',
-            demo: 'https://github.com/raunak-gix'
+            description: `Full-stack web applications, interactive festival portals, and frontend design systems engineered with responsive layouts and component-driven codebases.`,
+            items: [
+                {
+                    name: 'PARIDHI 2026 TECHFEST WEB PLATFORM',
+                    img: 'assets/paridhi_2026_website.jpg',
+                    tags: ['HTML5/CSS3', 'JavaScript', 'Figma'],
+                    desc: 'Official technical festival web portal featuring domain selection drawers, live countdown timer, and registration workflows.'
+                },
+                {
+                    name: 'AI RESUME CHECKER & ANALYTICS DASHBOARD',
+                    img: 'assets/resume_checker_dashboard.jpg',
+                    tags: ['React', 'Node.js', 'Dashboard UI'],
+                    desc: 'Smart resume analyzer application with ATS keyword matching algorithms and interactive candidate metrics dashboard.'
+                },
+                {
+                    name: 'SIGN LANGUAGE GESTURE RECOGNITION UI',
+                    img: 'assets/sign_language_translator.jpg',
+                    tags: ['Python', 'Computer Vision', 'Web UI'],
+                    desc: 'Accessibility web interface for real-time sign language recognition, translating video gestures into text.'
+                }
+            ]
         },
         'photography-card': {
             title: 'PHOTOGRAPHY & CONCEPTUAL ART',
             badge: 'VISUAL ARTS // EVENT & ATMOSPHERIC PHOTOGRAPHY',
-            tags: ['Camera Shots', 'Lightroom', 'Photoshop', 'Concept Art', 'Krita'],
-            img: 'assets/photography_showcase.jpg',
-            description: `Visual photography collection highlighting atmospheric mood shots, event coverage, street photography, and original digital artwork created with Krita and Photoshop.`,
-            features: [
-                'High-contrast night & street photography with dramatic lighting and color grading.',
-                'Event photography coverage for college technical & cultural festivals.',
-                'Digital painting and concept artwork emphasizing character design and environmental depth.',
-                'Advanced photo post-processing, color correction, and visual retouching in Photoshop & Lightroom.'
-            ],
-            github: 'https://github.com/raunak-gix',
-            demo: 'https://github.com/raunak-gix'
+            description: `High-contrast visual photography, atmospheric lighting shots, college festival event coverage, and digital painting concept art created with Photoshop & Krita.`,
+            items: [
+                {
+                    name: 'CYBERPUNK STREET & ATMOSPHERIC PHOTOGRAPHY',
+                    img: 'assets/photography_showcase.jpg',
+                    tags: ['Night Shots', 'Lightroom', 'Atmospheric'],
+                    desc: 'Dramatic night street photography featuring neon reflections, high-contrast shadows, and cinematic color grading.'
+                },
+                {
+                    name: 'FESTIVAL & STAGE EVENT PHOTOGRAPHY',
+                    img: 'assets/raunak_portrait.jpg',
+                    tags: ['Event Coverage', 'Portraits', 'Photoshop'],
+                    desc: 'Live event coverage capturing stage performances, candid moments, and official promotional portraits.'
+                },
+                {
+                    name: 'DIGITAL PAINTING & CONCEPT ART COLLECTION',
+                    img: 'assets/sign_language_translator.jpg',
+                    tags: ['Krita', 'Photoshop', 'Digital Art'],
+                    desc: 'Original digital paintings, character design concepts, and atmospheric environment artwork rendered in Krita & Photoshop.'
+                }
+            ]
         }
     };
 
@@ -170,28 +200,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data && modalOverlay && modalBody) {
                 modalBody.innerHTML = `
-                    <div style="font-family: var(--font-mono); color: var(--neon-green); font-size: 0.8rem; margin-bottom: 8px;">${data.badge}</div>
-                    <h2 style="font-family: var(--font-mono); font-size: 2rem; margin-bottom: 16px;">${data.title}</h2>
-                    <img src="${data.img}" alt="${data.title}" style="width:100%; border-radius:6px; border:1px solid var(--border-color); margin-bottom: 24px;">
+                    <div class="modal-header-badge">${data.badge}</div>
+                    <h2 class="modal-header-title">${data.title}</h2>
+                    <p class="modal-header-desc">${data.description}</p>
                     
-                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 20px;">
-                        ${data.tags.map(t => `<span class="tag-pill accent">${t}</span>`).join('')}
+                    <div class="modal-domain-grid">
+                        ${data.items.map(item => `
+                            <div class="modal-domain-item">
+                                <img src="${item.img}" alt="${item.name}" class="modal-domain-item-img">
+                                <div class="modal-domain-item-body">
+                                    <div class="modal-domain-item-title">${item.name}</div>
+                                    <p class="modal-domain-item-desc">${item.desc}</p>
+                                    <div class="modal-domain-item-tags">
+                                        ${item.tags.map(t => `<span class="tag-pill accent">${t}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
 
-                    <p style="color: var(--text-secondary); line-height:1.7; margin-bottom: 24px;">${data.description}</p>
-                    
-                    <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin-bottom: 12px; color: var(--text-primary);">KEY HIGHLIGHTS:</h4>
-                    <ul style="color: var(--text-secondary); padding-left: 20px; line-height: 1.8; margin-bottom: 30px;">
-                        ${data.features.map(f => `<li style="margin-bottom:8px;">${f}</li>`).join('')}
-                    </ul>
-
-                    <div style="display:flex; gap:16px;">
-                        <a href="${data.github}" target="_blank" rel="noopener" class="btn-primary">
-                            <span>VIEW SOURCE CODE</span>
-                            <i data-lucide="github"></i>
-                        </a>
-                        <button onclick="document.getElementById('project-modal').classList.remove('open')" class="btn-outline">
-                            <span>CLOSE</span>
+                    <div style="display:flex; justify-content:flex-end; gap:16px;">
+                        <button onclick="document.getElementById('project-modal').classList.remove('open')" class="btn-primary">
+                            <span>CLOSE WINDOW</span>
                         </button>
                     </div>
                 `;
